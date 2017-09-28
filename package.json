@@ -1,0 +1,25 @@
+{
+  "name": "chrome-extensions-block-zhihu-ad",
+  "version": "0.0.1",
+  "description": "a chrome-extensions for block zhihu advert",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jiasm/chrome-extensions-block-zhihu-ad.git"
+  },
+  "keywords": [
+    "chrome",
+    "extensions",
+    "es6",
+    "blocker"
+  ],
+  "author": "jiasm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jiasm/chrome-extensions-block-zhihu-ad/issues"
+  },
+  "homepage": "https://github.com/Jiasm/chrome-extensions-block-zhihu-ad#readme"
+}
