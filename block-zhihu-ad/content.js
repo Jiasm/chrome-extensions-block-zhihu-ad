@@ -26,12 +26,22 @@ window.addEventListener('load', function () {
 
   function cleanAd () {
     // check feed ad
-    let adList = document.querySelectorAll('.Advert--card')
+    let adList = document.querySelectorAll('[data-za-module="AdItem"]')
 
     if (adList && adList.length) {
       console.log(`clean ad: ${adList.length}`);
       adList.forEach(tag => {
         let adCard = tag.parentNode.parentNode
+        adCard.parentNode.removeChild(adCard)
+      })
+    }
+
+    let adBannerList = document.querySelectorAll('[data-za-module="ExternalAdItem"]')
+
+    if (adBannerList && adBannerList.length) {
+      console.log(`clean banner ad: ${adBannerList.length}`);
+      adBannerList.forEach(tag => {
+        let adCard = tag
         adCard.parentNode.removeChild(adCard)
       })
     }
