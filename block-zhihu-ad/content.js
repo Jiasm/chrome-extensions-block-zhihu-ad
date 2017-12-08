@@ -26,7 +26,9 @@ window.addEventListener('load', function () {
 
   function cleanAd () {
     // check feed ad
-    let adList = document.querySelectorAll('[data-za-module="AdItem"]')
+    let adList = Array.from(document.querySelectorAll('[data-za-module="AdItem"]'))
+
+    // adList = [].concat(adList, )
 
     if (adList && adList.length) {
       console.log(`clean ad: ${adList.length}`);
@@ -36,7 +38,9 @@ window.addEventListener('load', function () {
       })
     }
 
-    let adBannerList = document.querySelectorAll('[data-za-module="ExternalAdItem"]')
+    let adBannerList = Array.from(document.querySelectorAll('[data-za-module="ExternalAdItem"]'))
+
+    adBannerList = [].concat(adBannerList, Array.from(document.querySelectorAll('[data-za-detail-view-path-is_ad="true"][data-za-detail-view-path-module="ExternalAdItem"]')), Array.from(document.querySelectorAll('[data-za-detail-view-path-is_ad="true"][data-za-detail-view-path-module="FeedItem"]')))
 
     if (adBannerList && adBannerList.length) {
       console.log(`clean banner ad: ${adBannerList.length}`);

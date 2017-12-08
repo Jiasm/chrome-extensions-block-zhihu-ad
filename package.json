@@ -1,6 +1,6 @@
 {
   "name": "chrome-extensions-block-zhihu-ad",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "a chrome-extensions for block zhihu advert",
   "main": "index.js",
   "scripts": {
