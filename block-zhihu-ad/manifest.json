@@ -1,6 +1,6 @@
 {
   "name": "知乎广告屏蔽",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "manifest_version": 2,
   "description": "屏蔽知乎feed流中的广告",
   "icons": {

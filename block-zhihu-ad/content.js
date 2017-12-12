@@ -33,8 +33,9 @@ window.addEventListener('load', function () {
     if (adList && adList.length) {
       console.log(`clean ad: ${adList.length}`);
       adList.forEach(tag => {
-        let adCard = tag.parentNode.parentNode
+        let adCard = tag.parentNode.parentNode.parentNode
         adCard.parentNode.removeChild(adCard)
+        // adCard.style.border = '1px solid red'
       })
     }
 
@@ -46,6 +47,7 @@ window.addEventListener('load', function () {
       console.log(`clean banner ad: ${adBannerList.length}`);
       adBannerList.forEach(tag => {
         let adCard = tag
+        // adCard.style.border = '1px solid red'
         adCard.parentNode.removeChild(adCard)
       })
     }
