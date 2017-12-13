@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
    * {@link http://about.silk.co/page/Mutation%20Events:%20What%20Happen}
    */
   $main.addEventListener('DOMSubtreeModified', function () {
-    let info = $main.dataset.zaModuleInfo
+    let info = $main.dataset.zaExtraModule
 
     if (info === lastInfo) {
       // other attribute
@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
     if (adList && adList.length) {
       console.log(`clean ad: ${adList.length}`);
       adList.forEach(tag => {
-        let adCard = tag.parentNode.parentNode.parentNode
+        let adCard = tag.parentNode.parentNode.parentNode.parentNode
         adCard.parentNode.removeChild(adCard)
         // adCard.style.border = '1px solid red'
       })
