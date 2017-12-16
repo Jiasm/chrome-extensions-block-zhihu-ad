@@ -28,12 +28,11 @@ window.addEventListener('load', function () {
     // check feed ad
     let adList = Array.from(document.querySelectorAll('[data-za-module="AdItem"]'))
 
-    // adList = [].concat(adList, )
+    adList = [].concat(adList, Array.from(document.querySelectorAll('[data-za-detail-view-path-is_ad="true"][data-za-detail-view-path-module="FeedItem"]')))
 
     if (adList && adList.length) {
-      console.log(`clean ad: ${adList.length}`);
       adList.forEach(tag => {
-        let adCard = tag.parentNode.parentNode.parentNode.parentNode
+        let adCard = tag.parentNode
         adCard.parentNode.removeChild(adCard)
         // adCard.style.border = '1px solid red'
       })
@@ -41,7 +40,7 @@ window.addEventListener('load', function () {
 
     let adBannerList = Array.from(document.querySelectorAll('[data-za-module="ExternalAdItem"]'))
 
-    adBannerList = [].concat(adBannerList, Array.from(document.querySelectorAll('[data-za-detail-view-path-is_ad="true"][data-za-detail-view-path-module="ExternalAdItem"]')), Array.from(document.querySelectorAll('[data-za-detail-view-path-is_ad="true"][data-za-detail-view-path-module="FeedItem"]')))
+    adBannerList = [].concat(adBannerList, Array.from(document.querySelectorAll('[data-za-detail-view-path-is_ad="true"][data-za-detail-view-path-module="ExternalAdItem"]')))
 
     if (adBannerList && adBannerList.length) {
       console.log(`clean banner ad: ${adBannerList.length}`);
